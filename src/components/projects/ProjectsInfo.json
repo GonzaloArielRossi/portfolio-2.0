@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Episode Picker",
+    "year": 2021,
+    "description": "Web app that shows a list of episodes based on the characters selected by the user. Advanced implementation of infinite queries, pagination, caching, intersection observer pattern, global store, and debounce search",
+    "techStack": [
+      "Next.js",
+      "TanStack Query (React Query)",
+      "Zustand",
+      "Chakra UI",
+      "TypeScript"
+    ],
+    "repoLink": "https://github.com/GonzaloArielRossi/frontend-conexa-challenge",
+    "deployLink": "https://frontend-conexa-challenge.vercel.app/",
+    "image": "/projects/episode-picker.gif"
+  },
+  {
+    "id": 2,
+    "title": "Flybondi Adventures",
+    "year": 2021,
+    "description": "This Full-Stack project is a flight search engine for people on a budget with no particular destination in mind. The front-end is a clone of Flybondi's UI. All the data is fetched from a MongoDB database through a RESTful API",
+    "techStack": [
+      "Next.js",
+      "ReactJS",
+      "Chakra UI",
+      "MongoDB",
+      "Mongoose",
+      "Express",
+      "NodeJs"
+    ],
+    "repoLink": "https://github.com/GonzaloArielRossi/flybondi-adventures",
+    "deployLink": "https://flybondi-adventures-g5pkd64x3-gonzaloarielrossi.vercel.app/",
+    "image": "/projects/flybondi-adventures.gif"
+  },
+  {
+    "id": 3,
+    "title": "Natours App",
+    "year": 2021,
+    "description": "Robust RESTful API with JWT, file uploads, emails, Stripe payments, Mapbox, route protection, roles, permissions, security, encryption, geospatial queries, pagination, filters, sorts and more. It also has a front-end created with Pug.",
+    "techStack": ["NodeJs", "Express", "MongoDB", "Mongoose", "JWT", "Pug"],
+    "repoLink": "https://github.com/GonzaloArielRossi/natours-app",
+    "deployLink": "https://motionless-gold-belt.cyclic.app/",
+    "image": "/projects/natours-app.gif"
+  },
+  {
+    "id": 4,
+    "title": "Sample Bucket",
+    "year": 2021,
+    "description": "Front-end project. Fully featured e-commerce with user authentication, Google Sign-In, product categories, audio previews with playable drum pads, shopping cart and stock control.",
+    "techStack": ["ReactJS", "Firebase", "CSS", "Javascript", "HTML"],
+    "repoLink": "https://github.com/GonzaloArielRossi/sample-bucket",
+    "deployLink": "https://gonzaloarielrossi.github.io/sample-bucket/",
+    "image": "/projects/sample-bucket.gif"
+  }
+]
