@@ -52,7 +52,7 @@ export default function Projects() {
                 <Text>{project.description}</Text>
                 <VStack>
                   <Heading fontSize={'lg'}>Tech Stack</Heading>
-                  {project.techStack.map((tech, idx) => (
+                  {project.techStack.map((tech) => (
                     <Text key={tech}>{tech}</Text>
                   ))}
                 </VStack>
