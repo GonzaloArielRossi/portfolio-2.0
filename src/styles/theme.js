@@ -17,15 +17,18 @@ const customTheme = extendTheme({
       500: '#4d5c3f',
       800: '#31362d'
     },
+    brandWhite: {
+      100: '#f2f2f2 '
+    },
     code: {
       100: '#22212C',
       200: '#FF5F56',
       300: '#FFBD2E',
       400: '#27C93F',
-      500: '#8AF15A',
-      600: '#47DCEA',
-      700: '#EF86C0',
-      800: '#FFFF80'
+      500: '#A5DD84',
+      600: '#5BB9CC',
+      700: '#E96C9A',
+      800: '#FFEE99'
     },
     cyan: {
       50: '#E6F6FF',
@@ -54,6 +57,7 @@ const customTheme = extendTheme({
   },
   config,
   fonts: {
+    altHeading: 'var(--font-neue-montreal-bold)',
     body: 'var(--font-neue-montreal-regular)',
     heading: 'var(--font-migra-extra-bold)'
   },
@@ -63,7 +67,8 @@ const customTheme = extendTheme({
         scrollBehavior: 'smooth'
       },
       body: {
-        color: props.colorMode === 'dark' ? 'white' : '#2C3043'
+        bg: props.colorMode === 'dark' ? '#2C3043' : 'brandWhite.100',
+        color: props.colorMode === 'dark' ? 'brandWhite.100' : '#2C3043'
       }
     })
   }
