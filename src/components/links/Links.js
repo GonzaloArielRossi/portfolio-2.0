@@ -39,7 +39,7 @@ export default function Links() {
   ];
 
   return (
-    <Box>
+    <Box as={'nav'}>
       <Grid
         gap={8}
         justifyContent={'center'}

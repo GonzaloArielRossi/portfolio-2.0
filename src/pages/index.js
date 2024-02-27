@@ -1,10 +1,11 @@
+import { Flex } from '@chakra-ui/react';
 import Head from 'next/head';
 
 import AboutMe from '@/components/about-me/AboutMe';
 import Footer from '@/components/footer/Footer';
+import Header from '@/components/header/Header';
 import Layout from '@/components/layout/Layout';
 import Links from '@/components/links/Links';
-import Navbar from '@/components/navbar/Navbar';
 import Projects from '@/components/projects/Projects';
 
 export default function Home() {
@@ -16,15 +17,21 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link href="/favicon.ico" rel="icon" />
       </Head>
-      <main>
-        <Layout>
-          <Navbar />
-          <Links />
+      <Layout>
+        <Header />
+        <Links />
+        <Flex
+          align={'center'}
+          as={'main'}
+          direction={'column'}
+          gap={24}
+          justify={'center'}
+        >
           <AboutMe />
           <Projects />
-        </Layout>
-        <Footer />
-      </main>
+        </Flex>
+      </Layout>
+      <Footer />
     </>
   );
 }

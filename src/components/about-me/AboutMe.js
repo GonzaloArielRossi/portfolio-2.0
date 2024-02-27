@@ -7,6 +7,7 @@ export default function AboutMe() {
   const numberOfLines = useCountDivLines('code-container');
   return (
     <Box
+      as={'section'}
       bgColor={'code.100'}
       fontFamily={'var(--font-hack-regular)'}
       fontSize={'md'}

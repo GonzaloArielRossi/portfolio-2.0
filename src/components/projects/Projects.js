@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   Text,
   Tooltip,
+  useColorMode,
   VStack
 } from '@chakra-ui/react';
 import Image from 'next/image';
@@ -15,20 +16,23 @@ import { IoLogoGithub, IoRocketOutline } from 'react-icons/io5';
 import ProjectsInfo from '@/components/projects/ProjectsInfo.json';
 
 export default function Projects() {
+  const { colorMode } = useColorMode();
   return (
-    <>
+    <section>
       <Heading
-        color={'brandGreen.500'}
+        color={colorMode === 'light' ? 'brandGreen.500' : 'brandWhite.100'}
         fontSize={'6xl'}
         id="projects"
+        mb={8}
         textAlign={'center'}
       >
         Projects
       </Heading>
-      <Flex direction={'column'} gap={{ base: 8, md: 12 }} w={'100%'}>
+      <Flex direction={'column'} gap={{ base: 8, md: 24 }} w={'100%'}>
         {ProjectsInfo.map((project) => (
           <Box
             key={project.id}
+            as={'article'}
             borderColor={'gray.50'}
             borderWidth={'1px'}
             p={8}
@@ -46,12 +50,14 @@ export default function Projects() {
               templateColumns={{ base: '1fr', md: '1fr 2fr' }}
             >
               <VStack spacing={8}>
-                <Heading fontSize={'4xl'} textAlign={'center'}>
-                  {project.title}
+                <Heading fontFamily={'altHeading'} fontSize={'2xl'}>
+                  {`${project.title} (${project.year})`}
                 </Heading>
                 <Text>{project.description}</Text>
                 <VStack>
-                  <Heading fontSize={'lg'}>Tech Stack</Heading>
+                  <Heading fontFamily={'altHeading'} fontSize={'lg'}>
+                    Tech Stack
+                  </Heading>
                   {project.techStack.map((tech) => (
                     <Text key={tech}>{tech}</Text>
                   ))}
@@ -85,6 +91,6 @@ export default function Projects() {
           </Box>
         ))}
       </Flex>
-    </>
+    </section>
   );
 }
