@@ -2,8 +2,8 @@
   {
     "id": 1,
     "title": "Episode Picker",
-    "year": 2021,
-    "description": "Web app that shows a list of episodes based on the characters selected by the user. Advanced implementation of infinite queries, pagination, caching, intersection observer pattern, global store, and debounce search",
+    "year": 2023,
+    "description": "Web app that shows a list of episodes based on the characters selected by the user. Advanced implementation of infinite scroll, pagination, caching, intersection observer pattern, global store, and debounced search",
     "techStack": [
       "Next.js",
       "TanStack Query (React Query)",
@@ -17,8 +17,8 @@
   },
   {
     "id": 2,
-    "title": "Flybondi Adventures",
-    "year": 2021,
+    "title": "Flybondi",
+    "year": 2022,
     "description": "This Full-Stack project is a flight search engine for people on a budget with no particular destination in mind. The front-end is a clone of Flybondi's UI. All the data is fetched from a MongoDB database through a RESTful API",
     "techStack": [
       "Next.js",
@@ -35,8 +35,8 @@
   },
   {
     "id": 3,
-    "title": "Natours App",
-    "year": 2021,
+    "title": "Natours",
+    "year": 2022,
     "description": "Robust RESTful API with JWT, file uploads, emails, Stripe payments, Mapbox, route protection, roles, permissions, security, encryption, geospatial queries, pagination, filters, sorts and more. It also has a front-end created with Pug.",
     "techStack": ["NodeJs", "Express", "MongoDB", "Mongoose", "JWT", "Pug"],
     "repoLink": "https://github.com/GonzaloArielRossi/natours-app",
