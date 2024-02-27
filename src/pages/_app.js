@@ -15,6 +15,10 @@ const neueMontrealRegular = localFont({
   src: '../../public/fonts/NeueMontreal-Regular.otf'
 });
 
+const neueMontrealBold = localFont({
+  src: '../../public/fonts/NeueMontreal-Bold.otf'
+});
+
 const hackRegular = localFont({
   src: '../../public/fonts/Hack-Regular.ttf'
 });
@@ -31,6 +35,7 @@ export default function App({ Component, pageProps }) {
             --font-neue-montreal-regular: ${neueMontrealRegular.style
               .fontFamily};
             --font-hack-regular: ${hackRegular.style.fontFamily};
+            --font-neue-montreal-bold: ${neueMontrealBold.style.fontFamily};
           }
         `}
       </style>
