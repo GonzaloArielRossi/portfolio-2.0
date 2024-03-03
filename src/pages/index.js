@@ -19,15 +19,15 @@ export default function Home() {
         <meta content="Gonzalo Ariel Rossi" name="twitter:title" />
 
         <meta
-          content="Full Stack Developer | React NextJs NodeJs Express MongoDB"
+          content="Full Stack Web Developer | React NextJs NodeJs Express SQL Python"
           name="description"
         />
         <meta
-          content="Full Stack Developer | React NextJs NodeJs Express MongoDB"
+          content="Full Stack Web Developer | React NextJs NodeJs Express SQL Python"
           property="og:description"
         />
         <meta
-          content="Full Stack Developer | React NextJs NodeJs Express MongoDB"
+          content="Full Stack Web Developer | React NextJs NodeJs Express SQL Python"
           name="twitter:description"
         />
 
