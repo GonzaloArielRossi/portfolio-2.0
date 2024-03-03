@@ -18,7 +18,7 @@ const customTheme = extendTheme({
       800: '#31362d'
     },
     brandWhite: {
-      100: '#f2f2f2 '
+      100: '#fafafa '
     },
     code: {
       100: '#22212C',
