@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import Head from 'next/head';
+import { useRef } from 'react';
 
 import AboutMe from '@/components/about-me/AboutMe';
 import Footer from '@/components/footer/Footer';
@@ -9,6 +10,7 @@ import Links from '@/components/links/Links';
 import Projects from '@/components/projects/Projects';
 
 export default function Home() {
+  const projectsSectionRef = useRef(null);
   return (
     <>
       <Head>
@@ -19,7 +21,7 @@ export default function Home() {
       </Head>
       <Layout>
         <Header />
-        <Links />
+        <Links projectsSectionRef={projectsSectionRef} />
         <Flex
           align={'center'}
           as={'main'}
@@ -28,7 +30,7 @@ export default function Home() {
           justify={'center'}
         >
           <AboutMe />
-          <Projects />
+          <Projects projectsSectionRef={projectsSectionRef} />
         </Flex>
       </Layout>
       <Footer />
