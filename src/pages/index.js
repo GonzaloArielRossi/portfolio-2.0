@@ -15,9 +15,40 @@ export default function Home() {
     <>
       <Head>
         <title>Home | Gonzalo Rossi</title>
-        <meta content="Gonzalo Ariel Rossi's Portfolio" name="description" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="Gonzalo Ariel Rossi" property="og:title" />
+        <meta content="Gonzalo Ariel Rossi" name="twitter:title" />
+
+        <meta
+          content="Full Stack Developer | React NextJs NodeJs Express MongoDB"
+          name="description"
+        />
+        <meta
+          content="Full Stack Developer | React NextJs NodeJs Express MongoDB"
+          property="og:description"
+        />
+        <meta
+          content="Full Stack Developer | React NextJs NodeJs Express MongoDB"
+          name="twitter:description"
+        />
+
+        <meta
+          content="https://i.postimg.cc/02v2zDKr/Screenshot-2024-03-03-132334.png"
+          property="og:image"
+        />
+        <meta
+          content="https://i.postimg.cc/02v2zDKr/Screenshot-2024-03-03-132334.png"
+          name="twitter:image"
+        />
+        <meta content="index" name="robots" />
+        <meta content="follow" name="robots" />
+        <meta
+          content="HTML, CSS, JavaScript, React, Node, Developer, Full Stack Developer, Front End Developer, Back End Developer, NextJs, Express, SQL, Gonzalo Rossi, Gonzalo Ariel Rossi, Programador, developer"
+          name="keywords"
+        />
+        <meta content="Gonzalo Ariel Rossi" name="author" />
+        <meta content="https://gonzalorossi.dev/" property="og:url" />
         <link href="/favicon.ico" rel="icon" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <Layout>
         <Header />
