@@ -5,29 +5,34 @@ import { LINK_TYPES } from '@/config/constants';
 
 export default function LinkButton({ linkInfo }) {
   const [isHovered, setIsHovered] = useState(false);
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <Box
+      _hover={{
+        cursor: 'pointer'
+      }}
       position={'relative'}
+      onClick={() => {
+        if (linkInfo.type === LINK_TYPES.INTERNAL) {
+          scrollToSection(linkInfo.link);
+        }
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <a
-        href={linkInfo.link}
-        rel="noreferrer"
-        target={linkInfo.type === LINK_TYPES.EXTERNAL ? '_blank' : ''}
-      >
-        <HStack>
-          <Text
-            fontFamily={'var(--font-neue-montreal-regular)'}
-            fontSize={'xl'}
-            textAlign={'center'}
-          >
-            {linkInfo.label}
-          </Text>
-          <Icon as={linkInfo.icon} boxSize={'20px'} />
-        </HStack>
-      </a>
+      <HStack>
+        <Text
+          fontFamily={'var(--font-neue-montreal-regular)'}
+          fontSize={'xl'}
+          textAlign={'center'}
+        >
+          {linkInfo.label}
+        </Text>
+        <Icon as={linkInfo.icon} boxSize={'20px'} />
+      </HStack>
       <Box
         bg={'brandGreen.500'}
         h={'4px'}

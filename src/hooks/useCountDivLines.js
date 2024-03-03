@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 
-export default function useCountDivLines(divId) {
+export default function useCountDivLines(ref) {
   const [numberOfLines, setNumberOfLines] = useState(0);
 
   useEffect(() => {
+    if (!ref || !ref.current) return;
     const countLinesInDiv = () => {
-      const div = document.getElementById(divId);
+      const div = ref.current;
       if (div) {
         const lineHeight = parseInt(window.getComputedStyle(div).lineHeight);
         const divHeight = div.clientHeight;

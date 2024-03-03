@@ -15,10 +15,10 @@ import { IoLogoGithub, IoRocketOutline } from 'react-icons/io5';
 
 import ProjectsInfo from '@/components/projects/ProjectsInfo.json';
 
-export default function Projects() {
+export default function Projects({ projectsSectionRef }) {
   const { colorMode } = useColorMode();
   return (
-    <section>
+    <section ref={projectsSectionRef}>
       <Heading
         color={colorMode === 'light' ? 'brandGreen.500' : 'brandWhite.100'}
         fontSize={'6xl'}

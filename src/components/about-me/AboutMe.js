@@ -1,10 +1,12 @@
 import { Box, Flex, HStack, Text, VStack } from '@chakra-ui/react';
+import { useRef } from 'react';
 
 import AboutMeHeader from '@/components/about-me/AboutMeHeader';
 import useCountDivLines from '@/hooks/useCountDivLines';
 
 export default function AboutMe() {
-  const numberOfLines = useCountDivLines('code-container');
+  const codeContainerRef = useRef(null);
+  const numberOfLines = useCountDivLines(codeContainerRef);
   return (
     <Box
       as={'section'}
@@ -34,7 +36,7 @@ export default function AboutMe() {
               </Text>
             ))}
           </VStack>
-          <Box id="code-container">
+          <Box ref={codeContainerRef}>
             <Box>
               <Text>
                 <Text as={'span'} color={'code.500'}>

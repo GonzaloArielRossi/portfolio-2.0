@@ -6,11 +6,10 @@ import {
   IoNewspaper
 } from 'react-icons/io5';
 
+import LinkButton from '@/components/links/LinkButton';
 import { LINK_TYPES } from '@/config/constants';
 
-import LinkButton from './LinkButton';
-
-export default function Links() {
+export default function Links({ projectsSectionRef }) {
   const links = [
     {
       icon: IoLogoLinkedin,
@@ -33,7 +32,7 @@ export default function Links() {
     {
       icon: IoBriefcase,
       label: 'Projects',
-      link: '#projects',
+      link: projectsSectionRef,
       type: LINK_TYPES.INTERNAL
     }
   ];
@@ -49,9 +48,27 @@ export default function Links() {
           md: 'auto auto auto auto'
         }}
       >
-        {links.map((link) => (
-          <LinkButton key={link.label} linkInfo={link} />
-        ))}
+        {links.map((link) => {
+          if (link.type === LINK_TYPES.INTERNAL) {
+            return (
+              <LinkButton
+                key={link.label}
+                linkInfo={link}
+                projectsSectionRef={projectsSectionRef}
+              />
+            );
+          }
+          return (
+            <a
+              key={link.label}
+              href={link.link}
+              rel="noreferrer"
+              target={'_blank'}
+            >
+              <LinkButton linkInfo={link} />
+            </a>
+          );
+        })}
       </Grid>
     </Box>
   );
