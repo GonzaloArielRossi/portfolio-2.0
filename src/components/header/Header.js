@@ -25,7 +25,7 @@ export default function Header() {
           fontSize={'2xl'}
           textAlign={'center'}
         >
-          Full Stack Web Dev
+          Web Developer
         </Text>
       </Box>
       <Tooltip
